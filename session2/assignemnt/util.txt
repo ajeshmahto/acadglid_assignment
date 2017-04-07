@@ -1,0 +1,10 @@
+export const pi = 2.7;
+
+export function circleArea(radius){
+	return 2*radius*pi;
+}
+
+
+export class util {
+	
+}

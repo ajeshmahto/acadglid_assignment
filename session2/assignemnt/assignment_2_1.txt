@@ -1,0 +1,46 @@
+function Person(name){
+	this.name=name;
+}
+
+Person.prototype.prefixName = function(arr){
+	return arr.map((character)=>this.name+character)
+}
+
+
+var emp = new Person("ajesh");
+
+console.log(emp.prefixName(["Mr","tr","sr"]));
+
+let obj = {first:'Avnesh',last:'Shakya'}
+let user = {first,last,dateofBirth='1989-10-12'} = obj;
+let {first:f,last:l} = obj;
+
+function fullName(user){
+	console.log(obj.first+" "+last+" "+ dateofBirth);
+}
+
+fullName(obj);
+
+
+var foo= ["name1", "name2", "name3"];
+var [one,two,three] =foo;
+
+console.log(one);
+console.log(two);
+console.log(three);
+
+(function() {
+	var food='Meow Mix';
+}());
+
+//console.log(food);
+
+{
+	var obj1 = {firstname:"xyz",lastname:"abc"};
+	let obj2 = {firstname:"xyz",lastname:"abc"};
+	console.log(obj1.firstname);
+	console.log(obj2.firstname);
+}
+
+console.log(obj1.lastname);
+//console.log(obj2.firstname);

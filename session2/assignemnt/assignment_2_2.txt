@@ -1,0 +1,34 @@
+//import {pi,circleArea} from 'util';
+
+
+//console.log(circleArea(5,pi));
+
+
+class Vehical  {
+	constructor(name, type){
+		this.name = name;
+		this.type= type;
+	}
+	
+	getName() {
+		return this.name;
+	}
+	
+	getType(){
+		return this.type;
+	}
+}
+
+class Car extends Vehical {
+	constructor(name){
+		super(name,'car');
+	}
+	
+	getName() {
+		console.log("it is a car :"+super.getName());
+	}
+}
+
+let car = new Car("civic");
+
+car.getName()) 

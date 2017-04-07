@@ -1,0 +1,20 @@
+var el = document.getElementById("output");
+console.log(el);
+ 
+function timeout(duration = 0){
+	return new Promise((resolve,reject)=> {
+        setTimeout(resolve,duration);
+        el.innerHTML = el.innerHTML + " Started";
+    })
+}
+
+
+
+var p = timeout(3000).then(()=>{
+    el.innerHTML = el.innerHTML + ", Promise Started";
+}).then(()=> {
+     el.innerHTML = el.innerHTML + ", Promise made";
+}).then(()=>{
+     el.innerHTML = el.innerHTML + " , Promise fullfiled";
+     return Promise.all([timeout(100), timeout(200)]);
+})
